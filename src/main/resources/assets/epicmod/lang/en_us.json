@@ -1,6 +1,8 @@
 {
   "item.epicmod.sapphire": "Sapphire",
   "item.epicmod.raw_sapphire": "Raw Sapphire",
-
+  "block.epicmod.sapphire_block": "Block of Sapphire",
+  "block.epicmod.sapphire_ore": "Sapphire Ore",
+  "block.epicmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "itemGroup.epictab": "Epic Things Mod"
 }
