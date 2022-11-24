@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "epicmod:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "epicmod:sapphire",
+    "count": 9
+  }
+}
