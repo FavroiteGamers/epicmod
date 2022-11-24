@@ -1,6 +1,7 @@
 package net.favroitegamers.epicmod;
 
 import com.mojang.logging.LogUtils;
+import net.favroitegamers.epicmod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,6 +22,8 @@ public class EpicMod {
     public EpicMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
