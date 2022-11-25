@@ -3,6 +3,7 @@ package net.favroitegamers.epicmod;
 import com.mojang.logging.LogUtils;
 import net.favroitegamers.epicmod.block.ModBlocks;
 import net.favroitegamers.epicmod.item.ModItems;
+import net.favroitegamers.epicmod.painting.ModPaintings;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,6 +27,8 @@ public class EpicMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModPaintings.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
