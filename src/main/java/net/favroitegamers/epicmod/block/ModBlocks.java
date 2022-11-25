@@ -1,6 +1,7 @@
 package net.favroitegamers.epicmod.block;
 
 import net.favroitegamers.epicmod.EpicMod;
+import net.favroitegamers.epicmod.block.custom.CastleBlock;
 import net.favroitegamers.epicmod.item.ModCreativeModeTab;
 import net.favroitegamers.epicmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -24,6 +25,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.EPICMOD_TAB);
+
+    public static final RegistryObject<Block> CASTLE_BLOCK = registerBlock("castle_block",
+            () -> new CastleBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.EPICMOD_TAB);
 
     public static final RegistryObject<Block> SAPPHIRE_ORE = registerBlock("sapphire_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)), ModCreativeModeTab.EPICMOD_TAB);
