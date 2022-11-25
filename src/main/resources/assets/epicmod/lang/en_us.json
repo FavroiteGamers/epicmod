@@ -9,6 +9,8 @@
   "block.epicmod.castle_block": "Bouncy House Floor",
   "block.epicmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
   "block.epicmod.cherry_crop": "Blueberry Crop",
+  "block.epicmod.bench_block": "Workbench Block",
 
-  "itemGroup.epictab": "Epic Things Mod"
+  "itemGroup.epictab": "Epic Things Mod",
+  "entity.minecraft.villager.epicmod.sapphire_smith": "Sapphire Smith"
 }

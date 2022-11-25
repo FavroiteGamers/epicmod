@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import net.favroitegamers.epicmod.block.ModBlocks;
 import net.favroitegamers.epicmod.item.ModItems;
 import net.favroitegamers.epicmod.painting.ModPaintings;
+import net.favroitegamers.epicmod.villager.ModVillagers;
 import net.favroitegamers.epicmod.world.feature.ModConfiguredFeatures;
 import net.favroitegamers.epicmod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -32,6 +33,7 @@ public class EpicMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
 
         ModConfiguredFeatures.register(modEventBus);
@@ -46,7 +48,9 @@ public class EpicMod {
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+         event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+         });
     }
 
 
@@ -56,7 +60,7 @@ public class EpicMod {
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_CROP.get(), RenderType.cutout());
+
         }
     }
 }

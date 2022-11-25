@@ -28,6 +28,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.EPICMOD_TAB);
 
+    public static final RegistryObject<Block> BENCH_BLOCK = registerBlock("bench_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)), ModCreativeModeTab.EPICMOD_TAB);
+
     public static final RegistryObject<Block> CASTLE_BLOCK = registerBlock("castle_block",
             () -> new CastleBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.EPICMOD_TAB);
 
