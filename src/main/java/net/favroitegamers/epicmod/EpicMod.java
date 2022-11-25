@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.favroitegamers.epicmod.block.ModBlocks;
 import net.favroitegamers.epicmod.item.ModItems;
 import net.favroitegamers.epicmod.painting.ModPaintings;
+import net.favroitegamers.epicmod.world.feature.ModConfiguredFeatures;
+import net.favroitegamers.epicmod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +33,9 @@ public class EpicMod {
         ModBlocks.register(modEventBus);
 
         ModPaintings.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
