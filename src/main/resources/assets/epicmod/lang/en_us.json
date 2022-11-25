@@ -1,9 +1,14 @@
 {
   "item.epicmod.sapphire": "Sapphire",
   "item.epicmod.raw_sapphire": "Raw Sapphire",
+  "item.epicmod.cherry": "Blueberry",
+  "item.epicmod.cherry_seeds": "Blueberry Seeds",
+
   "block.epicmod.sapphire_block": "Block of Sapphire",
   "block.epicmod.sapphire_ore": "Sapphire Ore",
   "block.epicmod.castle_block": "Bouncy House Floor",
   "block.epicmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.epicmod.cherry_crop": "Blueberry Crop",
+
   "itemGroup.epictab": "Epic Things Mod"
 }

@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.favroitegamers.epicmod.block.ModBlocks;
 import net.favroitegamers.epicmod.item.ModItems;
 import net.favroitegamers.epicmod.painting.ModPaintings;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -48,8 +50,8 @@ public class EpicMod {
     public static class ClientModEvents
     {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_CROP.get(), RenderType.cutout());
         }
     }
 }

@@ -2,6 +2,7 @@ package net.favroitegamers.epicmod.block;
 
 import net.favroitegamers.epicmod.EpicMod;
 import net.favroitegamers.epicmod.block.custom.CastleBlock;
+import net.favroitegamers.epicmod.block.custom.CherryCropBlock;
 import net.favroitegamers.epicmod.item.ModCreativeModeTab;
 import net.favroitegamers.epicmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -9,6 +10,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -34,6 +36,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(), UniformInt.of(3,7)), ModCreativeModeTab.EPICMOD_TAB);
+
+    public static final RegistryObject<Block> CHERRY_CROP = BLOCKS.register("cherry_crop",
+            () -> new CherryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);
